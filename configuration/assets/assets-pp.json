@@ -1,0 +1,6 @@
+[
+    "assets/data/*.json",
+    "assets/images",
+    "favicon.ico",
+    "web.config"
+]

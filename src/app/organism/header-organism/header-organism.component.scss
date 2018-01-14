@@ -1,0 +1,91 @@
+
+
+/* Actual code example */
+
+.wizard {
+  counter-reset: stepNo;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.wizard-step {
+  -webkit-flex: 1 0 0px;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0px;
+  list-style: none;
+  padding: 0 2% 0 0;
+  position: relative;
+}
+.wizard-step::before {
+  border-top: 3px solid #333;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 25px;
+}
+.wizard-step:last-child {
+  border: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+}
+.wizard-step:last-child::before {
+  border: 0 none;
+}
+.wizard-step:last-child:nth-child(2) {
+  max-width: calc(100% / 2);
+}
+.wizard-step:last-child:nth-child(3) {
+  max-width: calc(100% / 3);
+} 
+
+.wizard-step-link {
+  color: #333;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  position: relative;
+  text-decoration: none;
+  z-index: 10;
+}
+.wizard-step-link:before {
+  background: #333;
+  color: #fff;
+  counter-increment: stepNo;
+  content: counter(stepNo) ".";
+  display: block;
+  font-size: 2rem;
+  height: 50px;
+  line-height: 50px; 
+  margin-bottom: 12px;
+  text-align: center;
+  width: 50px;
+}
+ .wizard-step-link.active 
+  {
+  color: #000;
+  text-decoration: none;
+} 
+.wizard-step-link.active:before 
+ {
+  background: #fff;
+  border: 1px solid #333;
+  color: #333;
+}
+
+
+.wizard-step-link:hover,  {
+   
+  color: #000; 
+}
+.wizard-step-link:hover:before { 
+  
+  border: 1px solid #333;
+  background: #eee;
+}

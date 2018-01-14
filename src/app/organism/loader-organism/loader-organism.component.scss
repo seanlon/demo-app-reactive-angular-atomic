@@ -1,0 +1,43 @@
+
+
+ @mixin full-screen-block( ) {    
+    height:100%;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    overflow:hidden;
+    display:block;
+ }
+
+ @mixin center-screen-block( ) {    
+        position: absolute;
+        display:block;
+        left: 45%;
+        top: 45%;
+ }
+:host-context() .loading-canvas , :host-context() .loading-xhr-canvas{
+      position:absolute;
+      @include full-screen-block( ) ;  
+      top:0; 
+      left:0;  
+      z-index:900; 
+      background-color:rgba(255,255,255,.8);
+   
+  &>.text-loader{  
+      @include full-screen-block( ) ;  
+     @include center-screen-block( ) ;  
+     font-weight: bold;
+     font-size:x-large ;
+     color: black; 
+
+     img{ 
+       opacity:0.5;   
+       width: 75px;
+       height: 75px;
+     }
+     
+  } 
+}

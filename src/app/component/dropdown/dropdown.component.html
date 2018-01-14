@@ -1,0 +1,31 @@
+<div class="form-group" *ngIf="configuration">
+    <select (change)="handleSelection($event)" [id]="configuration.fieldName" [value]="configuration.value || configuration.defaultValue">
+ 
+    
+<!--start group list-->
+    <ng-template #optionListWithGroup > 
+      <optgroup   *ngFor="let optGroup of optGroups"  [label]="optGroup.label"> 
+          <option  *ngFor="let item of optGroup.list"  
+          [value]='item.value'>{{item.label}}</option>
+      </optgroup>    
+    </ng-template>  
+<!--end group list-->
+
+<!--start normal list-->
+    <ng-template #optionListWithoutGroup > 
+          <option  *ngFor="let item of configuration.valueList"  
+          [value]='item.value'>{{item.label}}</option>
+    </ng-template>  
+<!--end normal list-->
+
+<!--start rendering placeholder-->
+    <ng-container  *ngTemplateOutlet="configuration.category ==='sub-dropdown' ? optionListWithoutGroup :optionListWithGroup ">
+    </ng-container>
+
+<!--end rendering placeholder-->
+
+  </select>
+  <label class="control-label" for="select">{{configuration.label}}</label>
+  
+
+</div>

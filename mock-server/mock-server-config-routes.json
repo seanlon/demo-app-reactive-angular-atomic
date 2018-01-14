@@ -1,0 +1,7 @@
+{ 
+  "/organism-version": "/fieldsListVersion",
+  "/organism-credential": "/fieldsListCredential",
+  "/fields/:info": "/fieldsDetails",
+  "/settings": "/settingInfo",
+  "/deployments": "/doDeployment"   
+}

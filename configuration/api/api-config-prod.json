@@ -1,0 +1,5 @@
+﻿{
+  "storageApiUrl": "$APIURL$/api/v1/storage",
+  "certificateApiUrl": "$APIURL$/api/v1/certificate",
+  "authApiUrl": "$APIURL$/api"
+}

@@ -1,0 +1,5 @@
+﻿{
+  "storageApiUrl": "https://mp-api-demo.azurewebsites.net/api/v1/storage",
+  "certificateApiUrl": "https://mp-api-demo.azurewebsites.net/api/v1/certificate",
+  "authApiUrl": "https://mp-api-demo.azurewebsites.net/api"
+}

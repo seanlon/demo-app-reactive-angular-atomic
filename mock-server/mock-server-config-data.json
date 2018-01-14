@@ -1,0 +1,93 @@
+{
+  "fieldsListCredential": [
+    {
+      "type": "textbox",
+      "category": "text",
+      "fieldName": "username",
+      "label": "User name",
+      "isExpressionEnabled": true,
+      "defaultValue": "[getDefaultAdmin()]"
+    },
+    {
+      "type": "textbox",
+      "category": "password",
+      "fieldName": "password",
+      "label": "Password",
+      "isExpressionEnabled": true,
+      "defaultValue": "saadmin!2312#"
+    }
+  ],
+  "fieldsListVersion": [
+    {
+      "type": "dropdown",
+      "category": "dropdown",
+      "fieldName": "version",
+      "label": "Choose Version",
+      "isExpressionEnabled": true,
+      "defaultValue": "11.0",
+      "valueList": [
+        {
+          "label": "10.0",
+          "value": "10.0",
+          "group": "Version 10"
+        },
+        {
+          "label": "10.1",
+          "value": "10.1",
+          "group": "Version 10"
+        },
+        {
+          "label": "11.0",
+          "value": "11.0",
+          "group": "Version 11"
+        }
+      ]
+    },
+    {
+      "type": "dropdown",
+      "category": "sub-dropdown",
+      "fieldName": "topology",
+      "label": "Choose topology",
+      "isExpressionEnabled": true,
+      "defaultValue": "Express-Premium",
+      "dependentsOn": "version",
+      "valueList": [
+        {
+          "label": "Complete Premium",
+          "value": "Premium-Complete"
+        },
+        {
+          "label": "Basic Core",
+          "value": "Basic-Core"
+        },
+        {
+          "label": "Express Premium",
+          "value": "Express-Premium"
+        }
+      ]
+    }
+  ],
+  "fieldsDetails": {
+    "accessToken": "--!999sdfds#$%!@#sdasdasdDSF@#$HJYYIUYSD@#$@#adas1231231---",
+    "resourceUrl": [
+      "http://wdpurl",
+      "http://wdpurl2"
+    ],
+    "armTemplateUrl": [
+      "http://armTemplateUrl",
+      "http://armTemplateUrl2"
+    ]
+  },
+  "settingInfo": {
+    "mode": "NORMAL",
+    "isMaintenanceMode": false
+  },
+  "doDeployment": {
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "",
+    "parameters": {},
+    "variables": {},
+    "resources": [],
+    "outputs": {}
+  }
+}

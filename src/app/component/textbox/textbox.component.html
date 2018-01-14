@@ -1,0 +1,6 @@
+<div *ngIf="configuration" class="form-group">
+
+  <input required="required" (change)="handleSelection($event)" [type]="configuration.category" [id]="configuration.fieldName"
+    [value]="configuration.value || configuration.defaultValue" /> <label class="control-label" for="input">{{configuration.label}}</label>
+
+</div>

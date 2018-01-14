@@ -1,0 +1,27 @@
+<div *ngIf="userSelectedData.length">
+  <h2> Confirm Deployment</h2>
+
+  <h3> <br> </h3>
+  <!--step 1-->
+  <h3>Your Step 1 Selection</h3>
+  <div *ngFor="let item of userSelectedDataVersion.fields">
+    <p> <label class="control-label">{{item.label}}</label>-
+      <span>{{item.value ||item.defaultValue}}</span>
+    </p>
+  </div>
+
+  <h3> <br> </h3>
+  <!--step 2-->
+  <h3>Your Step 2 config </h3>
+  <div *ngFor="let item of userSelectedDataCredential.fields">
+    <p> <label class="control-label">{{item.label}}</label>-
+
+      <span *ngIf="item.category==='password'">{{item.value||item.defaultValue |sensitiveData }}</span>
+      <span *ngIf="item.category !=='password'">{{item.value||item.defaultValue   }}</span></p>
+  </div>
+  <!--button deploy-->
+
+  <div class="button-container">
+    <button (click)="doDeployment()" class="button" type="button"><span>Deploy</span></button>
+  </div>
+</div>
